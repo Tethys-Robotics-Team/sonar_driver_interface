@@ -17,15 +17,24 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+
+include_directories(
+   ${rclcpp_INCLUDE_DIRS}
+)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SonarConfiguration.msg"
   "msg/SonarConfigurationChange.msg"
   DEPENDENCIES std_msgs builtin_interfaces
 )
+
+install(
+  FILES bridge_mapping_rules.yaml
+  DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
