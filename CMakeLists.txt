@@ -29,6 +29,7 @@ include_directories(
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SonarConfiguration.msg"
   "msg/SonarConfigurationChange.msg"
+  "msg/SonarBearings.msg"
   DEPENDENCIES std_msgs builtin_interfaces
 )
 
