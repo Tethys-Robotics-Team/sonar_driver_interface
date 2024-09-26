@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(sonar_driver_interface)
+project(sonar_driver_interfaces)
 
 
 find_package(catkin REQUIRED COMPONENTS
