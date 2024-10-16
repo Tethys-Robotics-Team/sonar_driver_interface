@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>sonar_driver_interfaces</name>
+  <name>sonar_driver_interface</name>
   <version>0.1.0</version>
   <description>Package containing custom messages for the sonar_driver package</description>
 
